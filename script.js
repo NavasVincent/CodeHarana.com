@@ -359,6 +359,13 @@ quoteForm.addEventListener('submit', async (e) => {
     const data = Object.fromEntries(formData);
 
     try {
+        // Check honeypot field (spam protection)
+        if (data.botcheck) {
+            // If honeypot is filled, it's likely a bot
+            console.log('Spam detected - honeypot field filled');
+            throw new Error('Spam detected');
+        }
+
         // Validate budget before submission
         const currency = data.currency || 'PHP';
         const minimum = minimumBudgets[currency] || 10000;
@@ -368,24 +375,45 @@ quoteForm.addEventListener('submit', async (e) => {
             throw new Error(`Budget must be at least ${currencySymbol}${minimum.toLocaleString()}`);
         }
 
-        // Simulate API delay
-        await new Promise(resolve => setTimeout(resolve, 2000));
-
         // Format budget for display
         const budgetFormatted = Number(data.budget).toLocaleString();
 
-        // Here you would normally send the data to your server
-        // Example:
-        // const response = await fetch('/api/quote', {
-        //     method: 'POST',
-        //     headers: { 'Content-Type': 'application/json' },
-        //     body: JSON.stringify(data)
-        // });
+        // Send to Web3Forms
+        const response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                access_key: '78243168-0b54-47ed-b1a9-d8c247177616',
+                subject: `New Quote Request from ${data.name}`,
+                from_name: data.name,
+                email: data.email,
+                botcheck: data.botcheck || '', // Honeypot field
+                message: `
+=== Quote Request Details ===
 
-        console.log('Form data:', {
-            ...data,
-            budgetFormatted: `${currencySymbol}${budgetFormatted}`
+Name: ${data.name}
+Email: ${data.email}
+Phone: ${data.phone || 'Not provided'}
+Company: ${data.company || 'Not provided'}
+Service: ${data.service}
+Budget: ${currencySymbol}${budgetFormatted} ${currency}
+
+Project Details:
+${data.message}
+                `.trim()
+            })
         });
+
+        const result = await response.json();
+
+        if (!response.ok || !result.success) {
+            throw new Error('Failed to send quote request');
+        }
+
+        console.log('Form submitted successfully:', result);
 
         // Show success message with animation
         formMessage.textContent = '🎉 Thank you! We\'ve received your quote request and will get back to you within 24 hours.';
