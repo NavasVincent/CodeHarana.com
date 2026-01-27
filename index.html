@@ -1,18 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeHarana - Web, iOS, Android & WordPress Development</title>
+    <title>CodeHarana - Web, iOS, Android & WordPress Development Agency</title>
+    <meta name="description"
+        content="CodeHarana is a premium software development agency specializing in bespoke web, iOS, Android, and WordPress solutions. We serenade your business with exceptional code.">
+    <meta name="keywords"
+        content="web development, iOS apps, Android apps, WordPress solutions, software agency, Philippines, bespoke software">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://codeharana.com/">
+    <meta property="og:title" content="CodeHarana - Bespoke Software Development">
+    <meta property="og:description"
+        content="We court your success with dedication, sincerity, and craftsmanship. Creating beautiful web and mobile solutions that win hearts.">
+    <meta property="og:image" content="og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://codeharana.com/">
+    <meta property="twitter:title" content="CodeHarana - Bespoke Software Development">
+    <meta property="twitter:description"
+        content="We court your success with dedication, sincerity, and craftsmanship. Creating beautiful web and mobile solutions that win hearts.">
+    <meta property="twitter:image" content="og-image.jpg">
+
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <!-- Loading Screen -->
     <div class="loading-screen">
-        <div class="loader"></div>
+        <div class="loader-wrapper">
+            <div class="loader"></div>
+            <p class="loader-text">Composing Excellence...</p>
+        </div>
     </div>
 
     <!-- Scroll Progress Indicator -->
@@ -27,8 +55,9 @@
             <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#projects">Work</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
                 <li><a href="#contact" class="btn-nav">Get Quote</a></li>
             </ul>
             <div class="hamburger">
@@ -41,20 +70,24 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-bg-accent"></div>
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
+                    <div class="hero-badge">✨ Bespoke Digital Craftsmanship</div>
                     <h1 class="hero-title">
                         <span class="title-line">We Serenade Your Business</span>
                         <span class="title-line">With <span class="gradient-text">Exceptional Code</span></span>
                         <span class="title-accent">♫</span>
                     </h1>
                     <p class="hero-description">
-                        Like a traditional harana, we court your success with dedication, sincerity, and craftsmanship. Creating beautiful web, mobile, and WordPress solutions that win hearts and drive results.
+                        Like a traditional Filipino harana, we court your success with dedication, sincerity, and
+                        craftsmanship. Creating beautiful web, mobile, and WordPress solutions that win hearts and drive
+                        results.
                     </p>
                     <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-primary">Get Started</a>
-                        <a href="#services" class="btn btn-secondary">Our Services</a>
+                        <a href="#contact" class="btn btn-primary">Start Your Journey</a>
+                        <a href="#services" class="btn btn-secondary">Explore Services</a>
                     </div>
                     <div class="hero-stats">
                         <div class="stat">
@@ -66,45 +99,48 @@
                             <p>Client Satisfaction</p>
                         </div>
                         <div class="stat">
-                            <h3>24/7</h3>
-                            <p>Support Available</p>
+                            <h3>10+</h3>
+                            <p>Years Experience</p>
                         </div>
                     </div>
                 </div>
                 <div class="hero-image">
                     <!-- Floating Card with Image -->
-                    <div class="floating-card card-1">
+                    <div class="floating-card card-1" style="--shimmer-delay: 0s">
                         <div class="card-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=300&fit=crop" alt="Mobile App Development" loading="lazy">
+                            <img src="images/earthchat.jpg" alt="Mobile App Development" loading="lazy">
                             <div class="card-overlay"></div>
                         </div>
                         <div class="card-content">
+                            <div class="card-icon">📱</div>
                             <h4>Mobile Apps</h4>
                             <p>iOS & Android</p>
                         </div>
                     </div>
 
                     <!-- Floating Card with Image -->
-                    <div class="floating-card card-2">
+                    <div class="floating-card card-2" style="--shimmer-delay: 1.5s">
                         <div class="card-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop" alt="Web Development" loading="lazy">
+                            <img src="images/convoiq.jpg" alt="Web Development" loading="lazy">
                             <div class="card-overlay"></div>
                         </div>
                         <div class="card-content">
-                            <h4>Web Development</h4>
-                            <p>Modern & Responsive</p>
+                            <div class="card-icon">💻</div>
+                            <h4>Web Engineering</h4>
+                            <p>Bespoke & Scalable</p>
                         </div>
                     </div>
 
                     <!-- Floating Card with Image -->
-                    <div class="floating-card card-3">
+                    <div class="floating-card card-3" style="--shimmer-delay: 2.5s">
                         <div class="card-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=300&fit=crop" alt="UI/UX Design" loading="lazy">
+                            <img src="images/melody.jpg" alt="UI/UX Design" loading="lazy">
                             <div class="card-overlay"></div>
                         </div>
                         <div class="card-content">
-                            <h4>UI/UX Design</h4>
-                            <p>Beautiful & Intuitive</p>
+                            <div class="card-icon">🎨</div>
+                            <h4>UI/UX Strategy</h4>
+                            <p>Human-Centric Design</p>
                         </div>
                     </div>
 
@@ -121,78 +157,135 @@
     <section id="services" class="services">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Our <span class="gradient-text">Services</span></h2>
-                <p class="section-description">Comprehensive solutions tailored to your business needs</p>
+                <span class="section-badge">Capabilities</span>
+                <h2 class="section-title">Our <span class="gradient-text">Premium Services</span></h2>
+                <p class="section-description">Comprehensive solutions tailored to your unique business vision</p>
             </div>
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card glass">
                     <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
                             <line x1="8" y1="21" x2="16" y2="21"></line>
                             <line x1="12" y1="17" x2="12" y2="21"></line>
                         </svg>
                     </div>
-                    <h3>Web Development</h3>
-                    <p>Custom websites and web applications built with modern technologies. From responsive designs to complex enterprise solutions.</p>
+                    <h3>Web Engineering</h3>
+                    <p>High-performance web applications built with the latest technologies. Scalable, secure, and
+                        lightning fast.</p>
                     <ul class="service-features">
-                        <li>Fast & Responsive Design</li>
-                        <li>E-commerce Solutions</li>
-                        <li>Custom Web Applications</li>
-                        <li>SEO Optimized</li>
+                        <li>React & Next.js Ecosystem</li>
+                        <li>Full-stack Architecture</li>
+                        <li>Headless CMS Integration</li>
+                        <li>Performance Optimization</li>
                     </ul>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card glass">
                     <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
                             <line x1="12" y1="18" x2="12.01" y2="18"></line>
                         </svg>
                     </div>
-                    <h3>iOS Development</h3>
-                    <p>Native iOS applications that deliver seamless performance and exceptional user experiences on all Apple devices.</p>
+                    <h3>Native iOS</h3>
+                    <p>Premium iOS applications that leverage the full potential of Apple\'s hardware and software
+                        ecosystem.</p>
                     <ul class="service-features">
-                        <li>Smooth Performance</li>
-                        <li>App Store Optimization</li>
-                        <li>Beautiful User Interface</li>
-                        <li>iPhone & iPad Support</li>
+                        <li>Swift & SwiftUI Expertise</li>
+                        <li>Impeccable User UX</li>
+                        <li>Apple Store Guidance</li>
+                        <li>Core Data & Integration</li>
                     </ul>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card glass">
                     <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-                            <path d="M12 18h.01"></path>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
                         </svg>
                     </div>
-                    <h3>Android Development</h3>
-                    <p>High-performance Android applications designed to reach millions of users across diverse device ecosystems.</p>
+                    <h3>Android Apps</h3>
+                    <p>Robust and versatile Android applications designed for consistent performance across thousands of
+                        devices.</p>
                     <ul class="service-features">
-                        <li>Fast & Reliable</li>
-                        <li>Modern Design</li>
-                        <li>Play Store Publishing</li>
-                        <li>Multi-Device Support</li>
+                        <li>Kotlin First Development</li>
+                        <li>Material Design Focus</li>
+                        <li>Play Store Management</li>
+                        <li>Hardware Integration</li>
                     </ul>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card glass">
                     <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <circle cx="12" cy="12" r="10"></circle>
                             <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
                             <path d="M2 12h20"></path>
                         </svg>
                     </div>
-                    <h3>WordPress Solutions</h3>
-                    <p>Custom WordPress themes, plugins, and complete website solutions that are easy to manage and scale.</p>
+                    <h3>WordPress Elite</h3>
+                    <p>Beyond simple blogs—we build enterprise-grade WordPress solutions with custom themes and complex
+                        functionality.</p>
                     <ul class="service-features">
-                        <li>Custom Design</li>
-                        <li>Easy to Manage</li>
-                        <li>Online Store Setup</li>
-                        <li>Lightning Fast Speed</li>
+                        <li>Bespoke Theme Design</li>
+                        <li>Custom Plugin Engineering</li>
+                        <li>WooCommerce Experts</li>
+                        <li>Enterprise Security</li>
                     </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Process Section -->
+    <section id="process" class="process">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">How We Work</span>
+                <h2 class="section-title">Composing Your <span class="gradient-text">Masterpiece</span></h2>
+                <p class="section-description">A systematic approach to bringing your digital vision to life</p>
+            </div>
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <div class="step-number-line"></div>
+                    <div class="step-content">
+                        <h3>Overture (Discovery)</h3>
+                        <p>We begin by listening to your goals, understanding your audience, and defining the project
+                            scope with absolute clarity.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <div class="step-number-line"></div>
+                    <div class="step-content">
+                        <h3>Composition (Design)</h3>
+                        <p>Our designers craft intuitive interfaces and seamless user flows that represent your brand
+                            with elegance and precision.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <div class="step-number-line"></div>
+                    <div class="step-content">
+                        <h3>Performance (Development)</h3>
+                        <p>Our engineers transform designs into robust, scalable, and high-performance code using modern
+                            best practices.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <div class="step-number-line"></div>
+                    <div class="step-content">
+                        <h3>Grand Finale (Launch)</h3>
+                        <p>After rigorous testing and refinement, we deliver your project and provide the support needed
+                            for a successful debut.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -203,94 +296,230 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
+                    <span class="section-badge">Our Philosophy</span>
                     <h2>Why Choose <span class="gradient-text">CodeHarana</span>?</h2>
-                    <p><strong>Harana</strong> is a traditional Filipino courtship where one serenades with sincerity and respect, expressing genuine affection through song. We bring this same dedication to your projects—courting your success with passionate craftsmanship, genuine care, and unwavering commitment to excellence.</p>
+                    <p><strong>Harana</strong> is a traditional Filipino courtship where one serenades with sincerity
+                        and respect, expressing genuine affection through song. We bring this same dedication to your
+                        projects—courting your success with passionate craftsmanship, genuine care, and unwavering
+                        commitment to excellence.</p>
                     <div class="features-list">
                         <div class="feature-item">
                             <div class="feature-icon">✓</div>
                             <div>
                                 <h4>Expert Team</h4>
-                                <p>Seasoned developers with 10+ years of experience</p>
+                                <p>Seasoned developers with 10+ years of collective experience</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon">✓</div>
                             <div>
-                                <h4>Agile Approach</h4>
-                                <p>Flexible and iterative development process</p>
+                                <h4>Agile Spirit</h4>
+                                <p>Flexible and iterative development focused on your feedback</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon">✓</div>
                             <div>
                                 <h4>Quality Assured</h4>
-                                <p>Rigorous testing and code review standards</p>
+                                <p>Rigorous testing standards for every line of code we write</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon">✓</div>
                             <div>
-                                <h4>On-Time Delivery</h4>
-                                <p>Committed to meeting deadlines without compromise</p>
+                                <h4>Timely Ovation</h4>
+                                <p>Committed to meeting deadlines without compromising quality</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="about-image">
-                    <div class="tech-stack">
-                        <div class="tech-item">Mobile First</div>
-                        <div class="tech-item">Cloud Ready</div>
-                        <div class="tech-item">Secure</div>
-                        <div class="tech-item">Scalable</div>
-                        <div class="tech-item">Fast Loading</div>
-                        <div class="tech-item">User Focused</div>
-                        <div class="tech-item">Cross Platform</div>
-                        <div class="tech-item">Modern Design</div>
+                    <div class="tech-stack-wrapper">
+                        <div class="tech-stack">
+                            <div class="tech-item glass">React</div>
+                            <div class="tech-item glass">Swift</div>
+                            <div class="tech-item glass">Kotlin</div>
+                            <div class="tech-item glass">Node.js</div>
+                            <div class="tech-item glass">Python</div>
+                            <div class="tech-item glass">AWS</div>
+                            <div class="tech-item glass">Firebase</div>
+                            <div class="tech-item glass">WordPress</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Featured Projects Section -->
+    <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Featured <span class="gradient-text">Live Projects</span></h2>
-                <p class="section-description">Real solutions we've built for businesses around the world</p>
+                <span class="section-badge">Portfolio</span>
+                <h2 class="section-title">Featured <span class="gradient-text">Live Work</span></h2>
+                <p class="section-description">Real-world solutions that are currently making an impact</p>
             </div>
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">🚀</div>
-                        <a href="https://convoiq.io" target="_blank" rel="noopener noreferrer" class="project-link">
-                            Visit Site →
-                        </a>
+                <div class="project-card glass">
+                    <div class="project-image">
+                        <img src="images/convoiq.jpg" alt="ConvoIQ Dashboard">
+                        <div class="project-badge">SaaS</div>
                     </div>
-                    <h3>ConvoIQ</h3>
-                    <p class="project-url">convoiq.io</p>
-                    <p class="project-description">Intelligent conversation platform powered by AI, enabling businesses to engage customers through smart, contextual interactions.</p>
-                    <div class="project-tags">
-                        <span class="tag">Web Platform</span>
-                        <span class="tag">AI Integration</span>
-                        <span class="tag">Real-time Chat</span>
+                    <div class="project-info">
+                        <p class="project-tagline">AI Conversation Platform</p>
+                        <h3>ConvoIQ</h3>
+                        <p class="project-description">Intelligent platform powered by AI, enabling businesses to engage
+                            customers through smart, contextual interactions.</p>
+                        <div class="project-tags">
+                            <span class="tag">Next.js</span>
+                            <span class="tag">OpenAI</span>
+                            <span class="tag">Real-time</span>
+                        </div>
+                        <a href="https://convoiq.io" target="_blank" rel="noopener noreferrer" class="project-link">View
+                            Project →</a>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">🌍</div>
-                        <a href="https://earthchat.app" target="_blank" rel="noopener noreferrer" class="project-link">
-                            Visit Site →
-                        </a>
+                <div class="project-card glass">
+                    <div class="project-image">
+                        <img src="images/earthchat.jpg" alt="EarthChat Mobile App">
+                        <div class="project-badge">Mobile</div>
                     </div>
-                    <h3>EarthChat</h3>
-                    <p class="project-url">earthchat.app</p>
-                    <p class="project-description">Global community platform connecting people worldwide through meaningful conversations and cultural exchange.</p>
-                    <div class="project-tags">
-                        <span class="tag">Mobile App</span>
-                        <span class="tag">Social Network</span>
-                        <span class="tag">Community</span>
+                    <div class="project-info">
+                        <p class="project-tagline">Global Social Network</p>
+                        <h3>EarthChat</h3>
+                        <p class="project-description">A community platform connecting people worldwide through
+                            meaningful conversations and cultural exchange.</p>
+                        <div class="project-tags">
+                            <span class="tag">Kotlin</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">WebSockets</span>
+                        </div>
+                        <a href="https://earthchat.app" target="_blank" rel="noopener noreferrer"
+                            class="project-link">View Project →</a>
+                    </div>
+                </div>
+
+                <div class="project-card glass">
+                    <div class="project-image">
+                        <img src="images/aivora.jpg" alt="Aivora Chatbot">
+                        <div class="project-badge">AI & Automation</div>
+                    </div>
+                    <div class="project-info">
+                        <p class="project-tagline">Intelligent Conversational Agent</p>
+                        <h3>Aivora AI</h3>
+                        <p class="project-description">A state-of-the-art AI chatbot designed for automated customer
+                            support and lead generation with human-like interactions.</p>
+                        <div class="project-tags">
+                            <span class="tag">AI / LLM</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Webhooks</span>
+                        </div>
+                        <a href="https://aivora.vincent-navas.me/" target="_blank" rel="noopener noreferrer"
+                            class="project-link">View Live Demo →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Kind Words</span>
+                <h2 class="section-title">Client <span class="gradient-text">Applause</span></h2>
+                <p class="section-description">What our partners have to say about working with us</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-card glass">
+                    <div class="testimonial-quote">"CodeHarana didn\'t just build our app; they understood our soul.
+                        Their dedication to craft is unparalleled."</div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop"
+                            alt="Client">
+                        <div>
+                            <h4>Michael Ross</h4>
+                            <p>CEO, ConvoIQ</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card glass">
+                    <div class="testimonial-quote">"The team brought such passion and technical depth to EarthChat. They
+                        are true partners in every sense."</div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop"
+                            alt="Client">
+                        <div>
+                            <h4>Sarah Jenkins</h4>
+                            <p>Founder, EarthChat</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card glass">
+                    <div class="testimonial-quote">"Fast, reliable, and incredibly talented. They simplified our complex
+                        e-commerce requirements effortlessly."</div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop"
+                            alt="Client">
+                        <div>
+                            <h4>David Chen</h4>
+                            <p>Ops Director, TechStyle</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Details</span>
+                <h2 class="section-title">Common <span class="gradient-text">Encore Questions</span></h2>
+                <p class="section-description">Find answers to frequently asked questions</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item glass">
+                    <div class="faq-question">
+                        <h3>How long does a typical project take?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Project timelines vary depending on complexity. A custom website typically takes 4-6 weeks,
+                            while mobile apps or complex enterprise solutions can take 3-6 months.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass">
+                    <div class="faq-question">
+                        <h3>Do you offer post-launch support?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer comprehensive maintenance packages to ensure your digital product stays secure,
+                            up-to-date, and performing at its best.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass">
+                    <div class="faq-question">
+                        <h3>What is your pricing model?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We work mainly with fixed-price project contracts based on a clearly defined scope. This
+                            gives you predictability and ensures alignment on deliverables.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass">
+                    <div class="faq-question">
+                        <h3>Which technologies do you specialize in?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We specialize in modern stacks including React, Next.js, Node.js, Swift, Kotlin, and custom
+                            WordPress engineering.</p>
                     </div>
                 </div>
             </div>
@@ -301,98 +530,79 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Let's Start Your <span class="gradient-text">Success Story</span></h2>
-                <p class="section-description">Share your vision with us and receive a personalized quote within 24 hours</p>
+                <span class="section-badge">Get Started</span>
+                <h2 class="section-title">Let\'s Act on Your <span class="gradient-text">Vision</span></h2>
+                <p class="section-description">Share your project details and receive a personalized quote within 24
+                    hours</p>
             </div>
             <div class="contact-wrapper">
                 <div class="contact-info">
-                    <h3>Let's Compose Your Digital Masterpiece</h3>
-                    <p>Just as a harana is performed with care and sincerity, we'll craft a personalized solution for your business. Share your vision, and we'll respond within 24 hours with a detailed quote.</p>
+                    <h3>Ready to Start Your Digital Harana?</h3>
+                    <p>Just as a harana is performed with care and sincerity, we\'ll craft a personalized solution for
+                        your business. Share your vision, and we\'ll compose the perfect digital response.</p>
                     <div class="contact-details">
-                        <div class="contact-item">
+                        <div class="contact-item glass">
                             <div class="contact-icon">📧</div>
                             <div>
-                                <h4>Email</h4>
+                                <h4>Email Us</h4>
                                 <p>hello@codeharana.com</p>
                             </div>
                         </div>
-                        <div class="contact-item">
+                        <div class="contact-item glass">
                             <div class="contact-icon">📞</div>
                             <div>
-                                <h4>Phone</h4>
-                                <p>+639773910140</p>
+                                <h4>Call Us</h4>
+                                <p>+63 977 391 0140</p>
                             </div>
                         </div>
-                        <div class="contact-item">
+                        <div class="contact-item glass">
                             <div class="contact-icon">📍</div>
                             <div>
-                                <h4>Office</h4>
-                                <p>Albay, Philippines</p>
+                                <h4>Our Stage</h4>
+                                <p>Albay, Philippines (Remote Worldwide)</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <form id="quoteForm" class="contact-form">
+                <form id="quoteForm" class="contact-form glass">
                     <div class="form-group">
                         <label for="name">Full Name</label>
                         <input type="text" id="name" name="name" placeholder="John Doe" autocomplete="name" required>
                     </div>
-                    <!-- Honeypot field for spam protection (hidden from users) -->
                     <input type="text" name="botcheck" style="display: none;" tabindex="-1" autocomplete="off">
                     <div class="form-group">
                         <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="john@example.com" autocomplete="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" placeholder="+63 912 345 6789" autocomplete="tel">
-                    </div>
-                    <div class="form-group">
-                        <label for="company">Company Name</label>
-                        <input type="text" id="company" name="company" placeholder="Your Company Inc." autocomplete="organization">
+                        <input type="email" id="email" name="email" placeholder="john@example.com" autocomplete="email"
+                            required>
                     </div>
                     <div class="form-group">
                         <label for="service">Service Required</label>
                         <select id="service" name="service" required>
-                            <option value="">Choose your service</option>
-                            <option value="web">Web Development</option>
-                            <option value="ios">iOS Development</option>
-                            <option value="android">Android Development</option>
-                            <option value="wordpress">WordPress Solutions</option>
-                            <option value="multiple">Multiple Services</option>
+                            <option value="">Choose your melody</option>
+                            <option value="web">Web Engineering</option>
+                            <option value="ios">Native iOS App</option>
+                            <option value="android">Android App</option>
+                            <option value="wordpress">WordPress Elite</option>
+                            <option value="multiple">Full Symphony (Multiple)</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="currency">Currency</label>
                         <select id="currency" name="currency" required>
-                            <option value="">Choose your currency</option>
                             <option value="PHP" selected>₱ Philippine Peso (PHP)</option>
                             <option value="USD">$ US Dollar (USD)</option>
                             <option value="EUR">€ Euro (EUR)</option>
                             <option value="GBP">£ British Pound (GBP)</option>
-                            <option value="AUD">A$ Australian Dollar (AUD)</option>
-                            <option value="CAD">C$ Canadian Dollar (CAD)</option>
-                            <option value="SGD">S$ Singapore Dollar (SGD)</option>
                         </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="budget">Budget Amount</label>
-                        <input
-                            type="number"
-                            id="budget"
-                            name="budget"
-                            min="10000"
-                            step="1000"
-                            placeholder="e.g., 50000"
-                            required>
                     </div>
                     <div class="form-group full-width">
                         <label for="message">Project Details</label>
-                        <textarea id="message" name="message" rows="5" required placeholder="Describe your project requirements, timeline, and any specific features you need..."></textarea>
+                        <textarea id="message" name="message" rows="4" required
+                            placeholder="Tell us about your masterpiece..."></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary btn-submit">
-                        <span class="btn-text">Request Quote</span>
-                        <span class="btn-loading">Sending...</span>
+                        <span class="btn-text">Send Request</span>
+                        <span class="btn-loading">Composing...</span>
                     </button>
                     <div class="form-message"></div>
                 </form>
@@ -406,35 +616,35 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <h3>CodeHarana<span class="highlight">.com</span></h3>
-                    <p>Serenading your business with exceptional code</p>
+                    <p>Serenading your business with exceptional code and passionate digital craftsmanship.</p>
                 </div>
                 <div class="footer-links">
                     <div class="footer-column">
-                        <h4>Services</h4>
+                        <h4>Expertise</h4>
                         <ul>
-                            <li><a href="#services">Web Development</a></li>
-                            <li><a href="#services">iOS Development</a></li>
-                            <li><a href="#services">Android Development</a></li>
+                            <li><a href="#services">Web Apps</a></li>
+                            <li><a href="#services">Mobile Design</a></li>
                             <li><a href="#services">WordPress</a></li>
+                            <li><a href="#services">UI/UX</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
-                        <h4>Company</h4>
+                        <h4>Studio</h4>
                         <ul>
-                            <li><a href="#about">About Us</a></li>
-                            <li><a href="#projects">Our Work</a></li>
+                            <li><a href="#about">Our Story</a></li>
+                            <li><a href="#projects">Portfolio</a></li>
                             <li><a href="#contact">Contact</a></li>
-                            <li><a href="#">Careers</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 CodeHarana. All rights reserved.</p>
+                <p>&copy; 2024 CodeHarana. Handcrafted with ❤️ in the Philippines.</p>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
