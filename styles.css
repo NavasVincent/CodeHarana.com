@@ -756,6 +756,14 @@ body.loaded {
     filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
     animation: logoFloat 6s ease-in-out infinite, logoFlash 8s infinite;
     transform-origin: center;
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.meaning-visual img:hover {
+    filter: drop-shadow(0 0 40px rgba(217, 119, 6, 0.8)) brightness(1.2) !important;
+    transform: scale(1.05);
+    cursor: pointer;
+    animation-play-state: paused;
 }
 
 .meaning-visual::before {
@@ -1668,6 +1676,13 @@ body.loaded {
 
     .step-number {
         margin: 0 auto;
+    }
+
+    .video-logo {
+        max-width: 80% !important;
+        /* Reduce logo size on mobile */
+        margin: 0 auto;
+        display: block;
     }
 }
 
