@@ -153,6 +153,44 @@
         </div>
     </section>
 
+
+
+    <!-- Brand Meaning Section -->
+    <section class="brand-meaning">
+        <div class="container">
+            <div class="meaning-wrapper">
+                <div class="meaning-visual">
+                    <!-- The Animated 'Video' Logo -->
+                    <img src="images/code-harana.png" alt="CodeHarana Typography" class="video-logo">
+                </div>
+                <div class="meaning-text">
+                    <span class="section-badge">Our Name</span>
+                    <h2>Harmonizing <span class="gradient-text">Logic & Soul</span></h2>
+                    <p class="section-description">How we blend two distinct worlds into one powerful identity.</p>
+
+                    <div class="meaning-grid">
+                        <div class="meaning-item">
+                            <div class="meaning-header">
+                                <div class="meaning-icon">C</div>
+                                <h4>Code</h4>
+                            </div>
+                            <p>The logic, structure, and modern technology that powers your digital presence. Precise,
+                                scalable, and robust.</p>
+                        </div>
+                        <div class="meaning-item">
+                            <div class="meaning-header">
+                                <div class="meaning-icon">H</div>
+                                <h4>Harana</h4>
+                            </div>
+                            <p>The traditional Filipino serenade. A gesture of sincerity, courtship, and deep emotional
+                                connection.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
@@ -609,6 +647,71 @@
             </div>
         </div>
     </section>
+
+    <!-- Music Player -->
+    <div class="music-player-container">
+        <div class="music-toggle-btn">
+            <span class="music-icon">♫</span>
+            <div class="music-tooltip">Serenade Me</div>
+            <div class="music-waves">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+
+        <div class="music-panel glass">
+            <div class="music-header">
+                <div class="music-info">
+                    <h4>Harana Serenade</h4>
+                    <p>Calm & Soulful</p>
+                </div>
+                <button class="music-close">×</button>
+            </div>
+
+            <div class="music-visualizer">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+            <div class="music-controls">
+                <button class="control-btn prev-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z" />
+                    </svg>
+                </button>
+                <button class="control-btn play-btn">
+                    <svg class="play-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z" />
+                    </svg>
+                    <svg class="pause-icon hidden" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+                    </svg>
+                </button>
+                <button class="control-btn next-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="music-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="time-display">
+                    <span class="current-time">0:00</span>
+                    <span class="total-time">0:00</span>
+                </div>
+            </div>
+        </div>
+
+        <audio id="harana-audio" loop>
+            <source src="assets/music/harana.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">

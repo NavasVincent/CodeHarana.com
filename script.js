@@ -113,7 +113,7 @@ document.querySelectorAll('.faq-question').forEach(button => {
     button.addEventListener('click', () => {
         const faqItem = button.parentElement;
         const isOpen = faqItem.classList.contains('active');
-        
+
         // Close all other items
         document.querySelectorAll('.faq-item').forEach(item => {
             item.classList.remove('active');
@@ -161,7 +161,7 @@ if (quoteForm) {
         e.preventDefault();
         const submitBtn = quoteForm.querySelector('.btn-submit');
         const originalText = submitBtn.innerHTML;
-        
+
         submitBtn.innerHTML = '<span>Composing...</span>';
         submitBtn.disabled = true;
 
@@ -209,3 +209,140 @@ window.addEventListener('scroll', () => {
 });
 
 console.log('🎵 CodeHarana - Composing Digital Excellence.');
+
+// ==========================================
+// MUSIC PLAYER LOGIC
+// ==========================================
+document.addEventListener('DOMContentLoaded', () => {
+    const musicContainer = document.querySelector('.music-player-container');
+    const toggleBtn = document.querySelector('.music-toggle-btn');
+    const musicPanel = document.querySelector('.music-panel');
+    const closeBtn = document.querySelector('.music-close');
+    const audio = document.getElementById('harana-audio');
+    const playBtn = document.querySelector('.play-btn');
+    const playIcon = document.querySelector('.play-icon');
+    const pauseIcon = document.querySelector('.pause-icon');
+    const progressContainer = document.querySelector('.progress-bar');
+    const progressFill = document.querySelector('.progress-fill');
+    const currTime = document.querySelector('.current-time');
+    const durTime = document.querySelector('.total-time');
+    const visualizer = document.querySelector('.music-visualizer');
+
+    // Toggle Music Panel
+    toggleBtn.addEventListener('click', () => {
+        musicPanel.classList.toggle('active');
+        // If panel is opening and music is not playing, maybe hint at playing? 
+        // For now just toggle visibility.
+    });
+
+    closeBtn.addEventListener('click', () => {
+        musicPanel.classList.remove('active');
+    });
+
+    // Play/Pause Audio
+    function togglePlay() {
+        if (audio.paused) {
+            const playPromise = audio.play();
+
+            if (playPromise !== undefined) {
+                playPromise.then(() => {
+                    playIcon.classList.add('hidden');
+                    pauseIcon.classList.remove('hidden');
+                    toggleBtn.classList.add('playing');
+                    visualizer.classList.add('playing');
+                }).catch(error => {
+                    console.log("Audio play blocked or failed:", error);
+                    // Open panel to encourage user interaction
+                    musicPanel.classList.add('active');
+
+                    // Show a tooltip hint
+                    const tooltip = document.querySelector('.music-tooltip');
+                    if (tooltip) {
+                        tooltip.textContent = "Click to Play Music";
+                        tooltip.style.opacity = '1';
+                        tooltip.style.visibility = 'visible';
+                        setTimeout(() => {
+                            tooltip.textContent = "Serenade Me";
+                        }, 3000);
+                    }
+                });
+            }
+        } else {
+            audio.pause();
+            playIcon.classList.remove('hidden');
+            pauseIcon.classList.add('hidden');
+            toggleBtn.classList.remove('playing');
+            visualizer.classList.remove('playing');
+        }
+    }
+
+    playBtn.addEventListener('click', togglePlay);
+
+    // Update Progress Bar & Time
+    function updateProgress(e) {
+        const { duration, currentTime } = e.srcElement;
+        const progressPercent = (currentTime / duration) * 100;
+        progressFill.style.width = `${progressPercent}%`;
+
+        // Calculate display time
+        const mins = Math.floor(currentTime / 60);
+        let secs = Math.floor(currentTime % 60);
+        if (secs < 10) secs = '0' + secs;
+        currTime.innerText = `${mins}:${secs}`;
+
+        // Calculate duration time
+        if (!isNaN(duration)) {
+            const totalMins = Math.floor(duration / 60);
+            let totalSecs = Math.floor(duration % 60);
+            if (totalSecs < 10) totalSecs = '0' + totalSecs;
+            durTime.innerText = `${totalMins}:${totalSecs}`;
+        }
+    }
+
+    // Set Progress Bar
+    function setProgress(e) {
+        const width = this.clientWidth;
+        const clickX = e.offsetX;
+        const duration = audio.duration;
+        audio.currentTime = (clickX / width) * duration;
+    }
+
+    audio.addEventListener('timeupdate', updateProgress);
+    progressContainer.addEventListener('click', setProgress);
+
+    // Audio Ends
+    audio.addEventListener('ended', () => {
+        // Loop is enabled in HTML, but just in case
+        playIcon.classList.remove('hidden');
+        pauseIcon.classList.add('hidden');
+        toggleBtn.classList.remove('playing');
+    });
+
+    // Initial Duration
+    audio.addEventListener('loadedmetadata', () => {
+        const totalMins = Math.floor(audio.duration / 60);
+        let totalSecs = Math.floor(audio.duration % 60);
+        if (totalSecs < 10) totalSecs = '0' + totalSecs;
+        durTime.innerText = `${totalMins}:${totalSecs}`;
+    });
+
+    // Auto-open tooltip after a delay
+    setTimeout(() => {
+        const tooltip = document.querySelector('.music-tooltip');
+        if (tooltip) {
+            tooltip.style.opacity = '1';
+            tooltip.style.visibility = 'visible';
+            tooltip.style.transform = 'translateY(-50%) translateX(0)';
+
+            setTimeout(() => {
+                // Hide again if not hovered
+                if (!toggleBtn.matches(':hover')) {
+                    tooltip.style.opacity = '';
+                    tooltip.style.visibility = '';
+                    tooltip.style.transform = '';
+                }
+            }, 4000);
+        }
+    }, 3000);
+});
+
