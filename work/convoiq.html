@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConvoIQ Case Study | Web Application Development | CodeHarana</title>
+    <meta name="description"
+        content="Explore how CodeHarana built ConvoIQ, a premium AI SaaS platform using Next.js and OpenAI. Comprehensive web engineering case study.">
+    <link rel="icon" type="image/png" href="/images/code-harana.png" />
+    <link rel="stylesheet" href="../styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        .case-study-hero {
+            padding: 160px 0 100px;
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .case-study-content {
+            padding: 80px 0;
+            line-height: 1.8;
+        }
+
+        .project-meta {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .tech-pill {
+            display: inline-block;
+            padding: 5px 15px;
+            background: rgba(var(--primary-rgb), 0.1);
+            color: var(--primary);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar active">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="../index.html" style="text-decoration: none; color: inherit;">
+                    <h2>CodeHarana<span class="highlight">.com</span></h2>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="../index.html#projects">Back to Work</a></li>
+                <li><a href="../index.html#contact" class="btn-nav">Get Quote</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="case-study-hero">
+        <div class="container">
+            <span class="section-badge">Case Study</span>
+            <h1 class="hero-title">ConvoIQ: AI-Powered <span class="gradient-text">Conversational SaaS</span></h1>
+            <p class="hero-description">Transforming business communication through intelligent, contextual AI
+                interactions.</p>
+
+            <div class="project-meta">
+                <div class="meta-item">
+                    <h4>Client</h4>
+                    <p>ConvoIQ Inc.</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Timeline</h4>
+                    <p>4 Months</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Services</h4>
+                    <p>Web Engineering, AI Integration</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Stack</h4>
+                    <p>Next.js, OpenAI, PostgreSQL</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="case-study-content">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <h2>The Challenge</h2>
+                <p>ConvoIQ needed a platform that could handle thousands of concurrent AI-driven conversations while
+                    maintaining low latency and high cost-efficiency. The existing solution was struggling to scale and
+                    lacked a modern, intuitive dashboard for business users.</p>
+
+                <h2 style="margin-top: 50px;">The Solution</h2>
+                <p>CodeHarana developed a bespoke web application using <strong>Next.js</strong> for a seamless,
+                    lightning-fast user experience. We implemented a robust backend architecture using
+                    <strong>Node.js</strong> and <strong>PostgreSQL</strong>, integrated with <strong>OpenAI's
+                        GPT-4</strong> via a custom queuing system to manage rate limits and ensure reliability.</p>
+
+                <img src="../images/web-development-agency-philippines.jpg" alt="ConvoIQ Dashboard Preview"
+                    style="width: 100%; border-radius: 20px; margin: 40px 0; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
+
+                <h2 style="margin-top: 50px;">Key Features</h2>
+                <ul class="service-features" style="display: block; columns: 2;">
+                    <li>Real-time Chat Analytics</li>
+                    <li>Custom AI Model Training</li>
+                    <li>Multi-channel Integration</li>
+                    <li>Enterprise-grade Security</li>
+                    <li>Automated Lead Qualification</li>
+                    <li>Collaborative Inbox</li>
+                </ul>
+
+                <h2 style="margin-top: 50px;">The Result</h2>
+                <p>The new ConvoIQ platform saw a <strong>300% increase in user engagement</strong> and a <strong>60%
+                        reduction in response times</strong>. The scalable architecture now supports over 50,000 active
+                    conversations daily without any performance degradation.</p>
+
+                <div
+                    style="margin-top: 80px; padding: 40px; background: var(--glass-bg); border-radius: 20px; text-align: center; border: 1px solid var(--glass-border);">
+                    <h3>Ready to build your next masterpiece?</h3>
+                    <p>Let's discuss how we can bring your vision to life.</p>
+                    <a href="../index.html#contact" class="btn btn-primary" style="margin-top: 20px;">Start Your
+                        Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 CodeHarana. Handcrafted with ❤️ in the Philippines.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        // Ensure navbar is active on load for subpages
+        document.querySelector('.navbar').classList.add('active');
+    </script>
+</body>
+
+</html>

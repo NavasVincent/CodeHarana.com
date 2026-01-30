@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Insights on Web & Mobile Development | CodeHarana</title>
+    <meta name="description"
+        content="Stay updated with the latest trends in Next.js, Flutter, and iOS development. Expert insights from CodeHarana development agency.">
+    <link rel="icon" type="image/png" href="/images/code-harana.png" />
+    <link rel="stylesheet" href="../styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        .blog-hero {
+            padding: 160px 0 80px;
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 80px 0;
+        }
+
+        .blog-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+        }
+
+        .blog-card-image {
+            height: 200px;
+            background: #1e293b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        .blog-card-content {
+            padding: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar active">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="../index.html" style="text-decoration: none; color: inherit;">
+                    <h2>CodeHarana<span class="highlight">.com</span></h2>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="../index.html#services">Services</a></li>
+                <li><a href="../index.html#contact" class="btn-nav">Get Quote</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="blog-hero">
+        <div class="container">
+            <span class="section-badge">Insights</span>
+            <h1 class="hero-title">Our <span class="gradient-text">Latest Compositions</span></h1>
+            <p class="hero-description">Thoughts on technology, design, and digital craftsmanship.</p>
+        </div>
+    </header>
+
+    <section class="container">
+        <div class="blog-grid">
+            <div class="blog-card">
+                <div class="blog-card-image">⚡</div>
+                <div class="blog-card-content">
+                    <span class="tag">Engineering</span>
+                    <h3 style="margin: 15px 0;">Why Next.js is the best choice for SaaS in 2026</h3>
+                    <p>Exploring the performance and developer experience benefits of the latest Next.js features...</p>
+                    <a href="#" class="project-link" style="margin-top: 15px; display: inline-block;">Read More →</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-card-image">📱</div>
+                <div class="blog-card-content">
+                    <span class="tag">Mobile</span>
+                    <h3 style="margin: 15px 0;">How to choose between Flutter and Native iOS</h3>
+                    <p>A deep dive into cross-platform vs native development for startups in the Philippines...</p>
+                    <a href="#" class="project-link" style="margin-top: 15px; display: inline-block;">Read More →</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-card-image">🎨</div>
+                <div class="blog-card-content">
+                    <span class="tag">Design</span>
+                    <h3 style="margin: 15px 0;">The Psychology of Color in UI/UX Strategy</h3>
+                    <p>How choosing the right palette can increase user conversion by up to 40%...</p>
+                    <a href="#" class="project-link" style="margin-top: 15px; display: inline-block;">Read More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 CodeHarana. Handcrafted with ❤️ in the Philippines.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        document.querySelector('.navbar').classList.add('active');
+    </script>
+</body>
+
+</html>
