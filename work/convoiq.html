@@ -14,37 +14,7 @@
         rel="stylesheet">
     <style>
         .case-study-hero {
-            padding: 160px 0 100px;
             background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .case-study-content {
-            padding: 80px 0;
-            line-height: 1.8;
-        }
-
-        .project-meta {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-            padding: 30px;
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-        }
-
-        .tech-pill {
-            display: inline-block;
-            padding: 5px 15px;
-            background: rgba(var(--primary-rgb), 0.1);
-            color: var(--primary);
-            border-radius: 20px;
-            font-size: 0.9rem;
-            margin-right: 10px;
-            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -72,6 +42,13 @@
             <p class="hero-description">Transforming business communication through intelligent, contextual AI
                 interactions.</p>
 
+            <div class="hero-buttons">
+                <a href="https://convoiq.io" target="_blank" class="btn btn-primary">View Live Demo →</a>
+                <a href="#challenge" class="btn btn-secondary"
+                    style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); color: white;">The
+                    Story</a>
+            </div>
+
             <div class="project-meta">
                 <div class="meta-item">
                     <h4>Client</h4>
@@ -93,7 +70,7 @@
         </div>
     </header>
 
-    <section class="case-study-content">
+    <section id="challenge" class="case-study-content">
         <div class="container">
             <div style="max-width: 800px; margin: 0 auto;">
                 <h2>The Challenge</h2>
@@ -105,7 +82,8 @@
                 <p>CodeHarana developed a bespoke web application using <strong>Next.js</strong> for a seamless,
                     lightning-fast user experience. We implemented a robust backend architecture using
                     <strong>Node.js</strong> and <strong>PostgreSQL</strong>, integrated with <strong>OpenAI's
-                        GPT-4</strong> via a custom queuing system to manage rate limits and ensure reliability.</p>
+                        GPT-4</strong> via a custom queuing system to manage rate limits and ensure reliability.
+                </p>
 
                 <img src="../images/web-development-agency-philippines.jpg" alt="ConvoIQ Dashboard Preview"
                     style="width: 100%; border-radius: 20px; margin: 40px 0; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
@@ -129,8 +107,10 @@
                     style="margin-top: 80px; padding: 40px; background: var(--glass-bg); border-radius: 20px; text-align: center; border: 1px solid var(--glass-border);">
                     <h3>Ready to build your next masterpiece?</h3>
                     <p>Let's discuss how we can bring your vision to life.</p>
-                    <a href="../index.html#contact" class="btn btn-primary" style="margin-top: 20px;">Start Your
-                        Project</a>
+                    <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 25px; flex-wrap: wrap;">
+                        <a href="../index.html#contact" class="btn btn-primary">Start Your Project</a>
+                        <a href="https://convoiq.io" target="_blank" class="btn btn-secondary">View Live Demo →</a>
+                    </div>
                 </div>
             </div>
         </div>
